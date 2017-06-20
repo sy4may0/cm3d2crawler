@@ -22,9 +22,6 @@ public class TaskQueue {
 	 *  <Description>	Scannerスレッドを制御するメッセージを同期するキュー。
 	 *  						Scannerはこのキューからメッセージを取得し、メッセージにより指定された操作を実行します。
 	 *
-	 *	<Example>		このキューには以下のメッセージが挿入されることを想定します。
-	 *  						UP_UPLDR : updateUploaderTable() : アップローダのページテーブルを更新する。
-	 *  						UP_MODIT : updateModItemTable() : MODテーブルを更新する。
 	 *  <Immutable>	この属性は変更することができません。
 	 */
 	private final BlockingQueue<String> scannerTaskQueue;
@@ -34,8 +31,6 @@ public class TaskQueue {
 	 * <Description>	Dwonloaderスレッドを制御するメッセージを同期するキュー。
 	 * 							Donwloaderはこのキューからメッセージを取得し、メッセージにより指定された操作を実行します。
 	 *
-	 * <Example>		このキューには以下のメッセージが挿入されることを想定します。
-	 * 							DL_MODIT : downloadModItem(maxDownload) : MODをダウンロードする。
 	 * <Immutable>	この属性は変更することができません。
 	 */
 	private final BlockingQueue<String> downloaderTaskQueue;
@@ -45,8 +40,6 @@ public class TaskQueue {
 	 * <Description>	Housekeeperスレッドを制御するメッセージを同期するキュー。
 	 *							Housekeeperスレッドははこのキューからメッセージを取得し、メッセージにより指定された操作を実行します。
 	 *
-	 * <Example>		このキューには以下のメッセージが挿入されることを想定します。
-	 * 							HK_ADMIT : adjustModItem() : ダウンロードフォルダとデータベースのダウンロード状態の整合性をとる。
 	 * <Immutable>	この属性は変更することができません。
 	 */
 	private final BlockingQueue<String> housekeeperTaskQueue;
