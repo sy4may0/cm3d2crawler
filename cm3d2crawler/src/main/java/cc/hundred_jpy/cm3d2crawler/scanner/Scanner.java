@@ -31,21 +31,21 @@ public class Scanner implements Runnable {
 	 * <Description>	うｐろだ更新を実行するメッセージを定義します。
 	 * <Constant>		この属性は定数です。
 	 */
-	public static final String SCAN_LOADER = "巨乳の先輩";
+	public static final String SCAN_LOADER = "A big ass manager";
 
 	/**
 	 * <Attribute>		SCAN_MOD
 	 * <Description>	MOD更新を実行するメッセージを定義します。
 	 * <Constant>		この属性は定数です。
 	 */
-	public static final String SCAN_MOD = "覚醒クリトリス";
+	public static final String SCAN_MOD = "Where is a Inari sushi";
 
 	/**
 	 * <Attribute>		TERMINATE
 	 * <Description>	スレッド停止メッセージを定義します。
 	 * <Constant>		この属性は定数です。
 	 */
-	public static final String TERMINATE = "足裏マンコ";
+	public static final String TERMINATE = "First of all, there is a rooftop at my house...";
 
 	/**
 	 * <Attribute>		taskQueue
