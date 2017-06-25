@@ -101,9 +101,6 @@ public class Scheduler implements Runnable {
 		while(this.isRun) {
 			try {
 				String[] command = this.terminalMessageQueue.take().split("[\\s]+");
-				if(command[0].equals(C_ADD_TASK)) {
-					System.out.println(command[0]);
-				}
 
 				/*
 				 * Schedulerを開始します。

@@ -5,6 +5,7 @@ package cc.hundred_jpy.cm3d2crawler.exceptions;
  * <Description>		不正なタスク実行時刻が発生した際にスローされます。。
  * <Exception>			このクラスは例外を定義します。
  * @author 100JPY
+ * @version 1.0
  */
 public class TimerUnmacheException extends Exception {
 	/**

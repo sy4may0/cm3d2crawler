@@ -23,7 +23,7 @@ import cc.hundred_jpy.cm3d2crawler.utilities.CM3D2CrawlProperties;
  * <Listenner>			このスレッドはイベントリスナーとして動作します。
  *
  * @author 				100JPY
- * @version				1.0
+ * @version				1.1
  *
  */
 public class Downloader implements Runnable {

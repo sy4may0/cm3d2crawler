@@ -28,7 +28,7 @@ import cc.hundred_jpy.cm3d2crawler.utilities.CM3D2CrawlProperties;
  *  <Handler>			このクラスはScannerに対するイベントハンドラです。
  *
  * @author 				100JPY
- * @version 				1.0
+ * @version 				1.1
  */
 public class ScannerHandler {
 
