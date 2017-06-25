@@ -1,7 +1,7 @@
 package cc.hundred_jpy.cm3d2crawler.taskqueue;
 
 import java.util.concurrent.BlockingQueue;
-import java.util.concurrent.SynchronousQueue;
+import java.util.concurrent.LinkedBlockingQueue;
 
 import cc.hundred_jpy.cm3d2crawler.exceptions.IllegalInterruptedException;
 /**
@@ -12,7 +12,7 @@ import cc.hundred_jpy.cm3d2crawler.exceptions.IllegalInterruptedException;
  * <Immutable>		このクラスはImmutableです。各属性の参照が変動しないことを保証します。
  *
  * @author 				100JPY
- * @version 				1.0
+ * @version 				1.1
  *
  */
 public class TaskQueue {
@@ -58,9 +58,9 @@ public class TaskQueue {
 	 * <Singleton>		このコンストラクタが2回以上実行されるような変更を禁止します。
 	 */
 	private TaskQueue() {
-		this.scannerTaskQueue = new SynchronousQueue<String>();
-		this.downloaderTaskQueue = new SynchronousQueue<String>();
-		this.housekeeperTaskQueue = new SynchronousQueue<String>();
+		this.scannerTaskQueue = new LinkedBlockingQueue<String>();
+		this.downloaderTaskQueue = new LinkedBlockingQueue<String>();
+		this.housekeeperTaskQueue = new LinkedBlockingQueue<String>();
 
 	}
 
@@ -95,18 +95,11 @@ public class TaskQueue {
 	/**
 	 * <Method>			entryScannerTask
 	 * <Description>	Scannerのタスク実行メッセージを登録します。
-	 * 							タスクを実行できるスレッドが存在しない場合、スレッドをブロックします。
 	 *
 	 * @param 			message
-	 * @throws 			IllegalInterruptedException
 	 */
-	public void entryScannerTask(String message) throws IllegalInterruptedException {
-		try {
-			this.scannerTaskQueue.put(message);
-		} catch (InterruptedException e) {
-			// TODO 自動生成された catch ブロック
-			throw new IllegalInterruptedException();
-		}
+	public void entryScannerTask(String message) {
+		this.scannerTaskQueue.add(message);
 	}
 
 	/**
@@ -129,18 +122,11 @@ public class TaskQueue {
 	/**
 	 * <Method>			entryDownloaderTask
 	 * <Description>	Downloaderのタスク実行メッセージを登録します。
-	 * 							タスクを実行できるスレッドが存在しない場合、スレッドをブロックします。
 	 *
 	 * @param 			message
-	 * @throws 			IllegalInterruptedException
 	 */
-	public void entryDownloaderTask(String message) throws IllegalInterruptedException {
-		try {
-			this.downloaderTaskQueue.put(message);
-		} catch (InterruptedException e) {
-			// TODO 自動生成された catch ブロック
-			throw new IllegalInterruptedException();
-		}
+	public void entryDownloaderTask(String message) {
+		this.downloaderTaskQueue.add(message);
 	}
 
 	/**
@@ -163,18 +149,11 @@ public class TaskQueue {
 	/**
 	 * <Method>			entryHousekeeperTask
 	 * <Description>	Housekeeperのタスク実行メッセージを登録します。
-	 * 							タスクを実行できるスレッドが存在しない場合、スレッドをブロックします。
 	 *
 	 * @param 			message
-	 * @throws 			IllegalInterruptedException
 	 */
-	public void entryHousekeeperTask(String message) throws IllegalInterruptedException  {
-		try {
-			this.housekeeperTaskQueue.put(message);
-		} catch (InterruptedException e) {
-			// TODO 自動生成された catch ブロック
-			throw new IllegalInterruptedException();
-		}
+	public void entryHousekeeperTask(String message)  {
+		this.housekeeperTaskQueue.add(message);
 	}
 
 }

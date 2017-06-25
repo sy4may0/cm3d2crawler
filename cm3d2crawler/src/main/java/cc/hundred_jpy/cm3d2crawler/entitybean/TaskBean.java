@@ -18,7 +18,7 @@ import java.time.LocalTime;
  * <Serializable>		このクラスは直列化できます。
  *
  * @author 100JPY
- * @version 1.0
+ * @version 1.1
  *
  */
 public class TaskBean implements Serializable {
@@ -29,7 +29,7 @@ public class TaskBean implements Serializable {
 	 * <PrimaryKey>	DBスキーマ側で主キー制約を持ちます。
 	 * <NotNull>			DBスキーマ側でNULL禁止制約を持ちます。
 	 */
-	private String id = null;
+	private int id = -1;
 
 	/**
 	 * <Attribute> 		taskType
@@ -56,10 +56,10 @@ public class TaskBean implements Serializable {
 	 * 以下はgetter/setterです。
 	 */
 
-	public String getId() {
+	public int getId() {
 		return id;
 	}
-	public void setId(String id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 	public String getTaskType() {

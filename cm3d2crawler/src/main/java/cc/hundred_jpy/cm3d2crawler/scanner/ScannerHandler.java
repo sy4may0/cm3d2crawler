@@ -91,6 +91,9 @@ public class ScannerHandler {
 		ulb.setName("ろだA");
 		ulb.setUrl(CM3D2CrawlProperties.getInstance().getStringProperty("root_url"));
 
+		/*
+		 * うｐろだAが存在しない場合、L1更新リストに追加します。
+		 */
 		boolean isExists = false;
 		for(UpLoaderBean ul : loaderList) {
 			if(ul.getUrl().equals(ulb.getUrl())) {
@@ -106,6 +109,9 @@ public class ScannerHandler {
 		}
 
 
+		/*
+		 * うｐろだがDBに存在しない場合、L1更新リストに追加します。
+		 */
 		for(String line : description.split("\n")) {
 			if(line.contains("ux.getuploader.com")) {
 				UpLoaderBean ul = new UpLoaderBean();

@@ -33,14 +33,14 @@ public class Downloader implements Runnable {
 	 * <Description>	ダウンロードを実行するメッセージを定義します。
 	 * <Constant>		この属性は定数です。
 	 */
-	public static final String DOWNLOAD = "That's right. (Piggybacking)";
+	public static final String DOWNLOAD = "That's_right_Piggybacking";
 
 	/**
 	 * <Attribute>		TERMINATE
 	 * <Description>	スレッド停止メッセージを定義します。
 	 * <Constant>		この属性は定数です。
 	 */
-	public static final String TERMINATE = "Beast senior";
+	public static final String TERMINATE = "Beast_senior";
 
 	/**
 	 * <Attribute>		headers

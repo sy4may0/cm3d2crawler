@@ -24,28 +24,28 @@ import cc.hundred_jpy.cm3d2crawler.utilities.CM3D2CrawlLogger;
  * @version				1.0
  *
  */
-public class Scanner implements Runnable {
+public class UploaderScanner implements Runnable {
 
 	/**
 	 * <Attrubyte>		SCAN_LOADER
 	 * <Description>	うｐろだ更新を実行するメッセージを定義します。
 	 * <Constant>		この属性は定数です。
 	 */
-	public static final String SCAN_LOADER = "A big ass manager";
+	public static final String SCAN_LOADER = "A_big_ass_manager";
 
 	/**
 	 * <Attribute>		SCAN_MOD
 	 * <Description>	MOD更新を実行するメッセージを定義します。
 	 * <Constant>		この属性は定数です。
 	 */
-	public static final String SCAN_MOD = "Where is a Inari sushi";
+	public static final String SCAN_MOD = "Where_is_a_Inari_sushi";
 
 	/**
 	 * <Attribute>		TERMINATE
 	 * <Description>	スレッド停止メッセージを定義します。
 	 * <Constant>		この属性は定数です。
 	 */
-	public static final String TERMINATE = "First of all, there is a rooftop at my house...";
+	public static final String TERMINATE = "First_of_all_there_is_a_rooftop_at_my_house";
 
 	/**
 	 * <Attribute>		taskQueue
@@ -86,7 +86,7 @@ public class Scanner implements Runnable {
 	 * <Method>			Constructor
 	 * <Description>	コンストラクタです。
 	 */
-	public Scanner() {
+	public UploaderScanner() {
 		this.taskQueue = TaskQueue.getInstance();
 		this.upLoaderList = new LinkedList<UpLoaderBean>();
 		this.upadatedUpLoaderList = new LinkedList<UpLoaderBean>();
