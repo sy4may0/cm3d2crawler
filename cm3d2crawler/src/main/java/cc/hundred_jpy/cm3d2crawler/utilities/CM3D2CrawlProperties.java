@@ -19,10 +19,10 @@ import cc.hundred_jpy.cm3d2crawler.exceptions.IllegalPropertyException;
 public class CM3D2CrawlProperties {
 
 	/**
-	 * ---(仮設定)---
 	 * ログファイルを定義します。
+	 * 引数から取得します。
 	 */
-	public static final String PROP_FILE = "cm3d2crawler.properties";
+	public static final String PROP_FILE = System.getProperty("master.property");
 
 	/**
 	 * <Attribute> 		properties

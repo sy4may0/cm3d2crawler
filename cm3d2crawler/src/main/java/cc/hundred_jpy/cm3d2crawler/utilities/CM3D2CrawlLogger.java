@@ -22,6 +22,12 @@ import cc.hundred_jpy.cm3d2crawler.exceptions.IllegalPropertyException;
  */
 public class CM3D2CrawlLogger {
 
+	/**
+	 * <Attribute> LOG4J_PROP_FILE
+	 * <description> ログファイルを定義する。
+	 */
+	public static final String LOG4J_PROP_FILE = System.getProperty("log.property");
+
 	/*
 	 * Logger
 	 * ロガーを定義する。
@@ -52,7 +58,7 @@ public class CM3D2CrawlLogger {
 	 * isDebagの参照先を定義し、loggeを構成する。
 	 */
 	private CM3D2CrawlLogger() {
-		PropertyConfigurator.configure("log4j.properties");
+		PropertyConfigurator.configure(LOG4J_PROP_FILE);
 		this.logger = Logger.getLogger("cm3d2CrawlLogger");
 
 		try {
