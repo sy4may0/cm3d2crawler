@@ -140,6 +140,11 @@ public class CM3D2Crawler {
     	scannerThread.start();
     	schedulerThread.start();
     	try(Scanner scan = new Scanner(System.in)) {
+
+    		if(args[0].equals("--daemon")) {
+				scheduler.operation(Scheduler.C_SCHEDULE_START);
+				return;
+    		}
     		while(true) {
 
     			try {
