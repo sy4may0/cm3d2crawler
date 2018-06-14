@@ -7,17 +7,6 @@ import java.time.LocalDateTime;
  * <Class> 				ModItemBean
  * <Description> 		テーブル"cm3d2_crawler_mod_m"に対するPOJOです。
  * 								各うｐろだにアップロードされたMODの情報を保持します。
- * 	<Example>			このクラスのインスタンス生成例を以下に示します。
- * 									id					: M_A237
- * 									comment		: 夜伽で脱げるパンツ（修正版）
- * 									origFileName	: 脱がしパンツ（共有ロダ用）.zip
- * 									url					: http://ux.getuploader.com/cm3d2/download/237/cm3d2_237.zip
- * 									fileName		: cm3d2_237.zip
- * 									fileSize			: 79823293
- * 									nominalSize	: 7.6MB
- * 									uploadDate	: 2016-05-11 13:53:19
- * 									isDownload	: true
- * 									masterUrl		: http://ux.getuploader.com/cm3d2/index/1/date/desc
  *
  * <UnThreadSafe>	このクラスはスレッドセーフではありません。
  * <Serializable>		このクラスは直列化できます。
